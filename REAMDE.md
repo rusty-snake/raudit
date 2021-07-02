@@ -28,7 +28,7 @@ sudo install -Dm0755 target/release/raudit $PREFIX/libexec/raudit
 sudo install -Dm0644 -t $PREFIX/share/raudit share/*.rules
 ```
 
-optionally you can build and install the man-page too.
+Optionally you can build and install the man-page too.
 
 ```bash
 make -C man man
