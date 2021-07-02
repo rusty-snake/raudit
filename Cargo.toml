@@ -1,0 +1,19 @@
+[package]
+name = "raudit"
+version = "0.1.0"
+description = "A configurable audit program for firejail-sandboxes with metrics"
+repository = "https://github.com/rusty-snake/raudit"
+authors = ["rusty-snake"]
+license = "GPL-3.0-or-later"
+edition = "2018"
+
+[dependencies]
+anyhow = "1.0"
+lazy_static = "1.0"
+log = "0.4"
+nix = "0.21"
+stderrlog = "0.5"
+structopt = "0.3"
+termcolor = "1.0"
+
+color-backtrace = { version = "0.5", optional = true }

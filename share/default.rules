@@ -1,0 +1,82 @@
+caps
+newprivs
+
+print Check write access to "Initialization files that allow arbitrary command execution" from disable-common.inc
+write ~/.caffrc
+write ~/.cargo/env
+write ~/.dotfiles
+write ~/.emacs
+write ~/.emacs.d
+write ~/.exrc
+write ~/.gvimrc
+write ~/.homesick
+write ~/.iscreenrc
+write ~/.local/lib
+write ~/.local/share/cool-retro-term
+write ~/.mailcap
+write ~/.msmtprc
+write ~/.mutt/muttrc
+write ~/.muttrc
+write ~/.nano
+write ~/.npmrc
+write ~/.pythonrc.py
+write ~/.reportbugrc
+write ~/.tmux.conf
+write ~/.vim
+write ~/.viminfo
+write ~/.vimrc
+write ~/.xmonad
+write ~/.xscreensaver
+write ~/.yarnrc
+write ~/_exrc
+write ~/_gvimrc
+write ~/_vimrc
+write ~/dotfiles
+
+
+print Check read access to "top secret" from disable-common.inc
+read ~/.Private
+read ~/.caff
+read ~/.cargo/credentials
+read ~/.cert
+read ~/.config/keybase
+read ~/.davfs2/secrets
+read ~/.ecryptfs
+read ~/.fetchmailrc
+read ~/.fscrypt
+read ~/.git-credential-cache
+read ~/.git-credentials
+read ~/.gnome2/keyrings
+read ~/.gnupg
+read ~/.config/hub
+read ~/.kde/share/apps/kwallet
+read ~/.kde4/share/apps/kwallet
+read ~/.local/share/keyrings
+read ~/.local/share/kwalletd
+read ~/.local/share/plasma-vault
+read ~/.msmtprc
+read ~/.mutt
+read ~/.muttrc
+read ~/.netrc
+read ~/.nyx
+read ~/.pki
+read ~/.local/share/pki
+read ~/.smbcredentials
+read ~/.ssh
+read ~/.vaults
+read /.fscrypt
+read /etc/davfs2/secrets
+read /etc/group+
+read /etc/group-
+read /etc/gshadow
+read /etc/gshadow+
+read /etc/gshadow-
+read /etc/passwd+
+read /etc/passwd-
+read /etc/shadow
+read /etc/shadow+
+read /etc/shadow-
+read /etc/ssh
+read /home/.ecryptfs
+read /home/.fscrypt
+read /var/backup
