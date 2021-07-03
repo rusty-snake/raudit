@@ -1,0 +1,29 @@
+name: Rust
+
+on:
+  push:
+    paths:
+      - .github/workflows/rust.yml
+      - src/*
+      - Cargo.lock
+      - Cargo.toml
+  pull_request:
+    paths:
+      - .github/workflows/rust.yml
+      - src/*
+      - Cargo.lock
+      - Cargo.toml
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: cargo -Vv && rustc -Vv
+    - run: cargo check
+    - run: cargo check --features=color-backtrace
+    - run: cargo fmt -- --check
+    - run: cargo clippy -- -Dwarnings -Dclippy::dbg_macro
