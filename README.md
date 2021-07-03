@@ -12,7 +12,7 @@ all check are hardcoded. raudit tries to fix this.
 
 ### Project history
 
-raudit started as a configurable alternative for faudit to be more flexiable.
+raudit started as a configurable alternative to faudit to be more flexiable.
 Nowadays it is a rootless alternative to jailcheck.
 
 ## Build and Install
