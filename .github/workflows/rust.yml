@@ -26,4 +26,5 @@ jobs:
     - run: cargo check
     - run: cargo check --features=color-backtrace
     - run: cargo fmt -- --check
-    - run: cargo clippy -- -Dwarnings -Dclippy::dbg_macro
+    # FIXME: reconsider -Aclippy::collapsible-else-if
+    - run: cargo clippy -- -Dwarnings -Dclippy::dbg_macro -Aclippy::collapsible-else-if
