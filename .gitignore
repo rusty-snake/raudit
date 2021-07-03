@@ -1,3 +1,5 @@
-/target/
 /docs/build/
 /man/raudit.7.gz
+/outdir/
+/target/
+/vendor/
