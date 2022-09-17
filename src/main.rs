@@ -20,6 +20,7 @@
 #![allow(private_intra_doc_links)]
 #![warn(rust_2018_idioms)]
 
+use clap::Parser;
 use lazy_static::lazy_static;
 use log::{debug, error, trace, warn};
 use nix::unistd::{access, AccessFlags};
@@ -30,7 +31,6 @@ use std::io::BufRead;
 use std::path::PathBuf;
 use std::str::FromStr;
 use stderrlog::StdErrLog;
-use structopt::StructOpt;
 use termcolor::ColorChoice;
 
 mod rule;
@@ -127,19 +127,19 @@ macro_rules! say {
 }
 
 /// [StructOpt](structopt) struct
-#[derive(StructOpt, Debug)]
-#[structopt(about)]
+#[derive(Parser, Debug)]
+#[clap(about)]
 struct Opt {
     /// Be quiet
-    #[structopt(short = "q", long = "quiet")]
+    #[clap(short = 'q', long = "quiet")]
     quiet: bool,
 
     /// Be verbose (-v, -vv, -vvv, ...)
-    #[structopt(short = "v", long = "verbose", parse(from_occurrences))]
+    #[clap(short = 'v', long = "verbose", parse(from_occurrences))]
     verbose: usize,
 
     /// Add timestamps to logging output
-    #[structopt(
+    #[clap(
         long = "timestamp",
         overrides_with("timestamp"),
         default_value("off"),
@@ -148,7 +148,7 @@ struct Opt {
     timestamp: stderrlog::Timestamp,
 
     /// Specify when to use colored output
-    #[structopt(
+    #[clap(
         long = "color",
         overrides_with("color-choice"),
         default_value("auto"),
